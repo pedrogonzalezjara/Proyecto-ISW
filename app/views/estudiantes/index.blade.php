@@ -33,5 +33,4 @@
     </td>
   </table>
   @stop
-</body>
-</html>
+

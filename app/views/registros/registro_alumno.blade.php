@@ -94,7 +94,5 @@
 	});
 	</script>
   @stop
-</body>
-</html>
 
 

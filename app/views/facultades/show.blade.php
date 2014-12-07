@@ -27,7 +27,8 @@
           <td>
             {{$facultades->descripcion }}
           </td>            
-          </tr>                       
+          </tr>
+                                
         @else
         <p>
           No existe información de esta facultad.

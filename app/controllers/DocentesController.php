@@ -68,8 +68,9 @@ class DocentesController extends \BaseController {
 	public function getShow($id)
 	{
 		$docente = Docentes::find($id);
+		$departamento = Departamentos::find($docente->departamento_fk);
 
-		return View::make('docentes.show')->with('docentes',$docente);
+		return View::make('docentes.show')->with('docentes',$docente)->with('departamento',$departamento);
 	}
 
 

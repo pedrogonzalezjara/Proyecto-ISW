@@ -25,11 +25,11 @@
   <li class="active"><a href="/escuelas">Escuelas</a></li>
   <li class="active"><a href="/carreras">Carreras</a></li>
   <li class="dropdown">
-            <a href="#"  data-toggle="dropdown" class="default dropdown-toggle">Registros <b class="caret "></b></a>
+            <a href="#"  data-toggle="dropdown" class="default dropdown-toggle">Personal <b class="caret "></b></a>
             <ul class="dropdown-menu ">
                 <li><a href="/estudiantes">Alumnos</a></li>
                 <li><a href="/funcionarios">Funcionarios</a></li>
-                <li><a href="docentes">Docentes</a></li>
+                <li><a href="/docentes">Docentes</a></li>
             </ul>
         </li>
     </ul>

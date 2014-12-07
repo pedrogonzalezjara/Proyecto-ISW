@@ -75,7 +75,7 @@ Route::controller('login/seleccion','LoginController');
 Route::controller('admin','AdminController');
 Route::controller('alumno','AlumnoController');
 
-Route::post('/registro_alumno/store','RegistrosController@store');
+Route::post('/registros/store','RegistrosController@store');
 Route::controller('registro_alumno','RegistrosController');
 
 

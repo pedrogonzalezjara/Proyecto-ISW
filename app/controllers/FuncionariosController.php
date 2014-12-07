@@ -69,8 +69,9 @@ class FuncionariosController extends \BaseController {
 	public function getShow($id)
 	{
 		$funcionario = Funcionarios::find($id);
+		$departamento = Departamentos::find($funcionario->departamento_fk);
 
-		return View::make('funcionarios.show')->with('funcionarios',$funcionario);
+		return View::make('funcionarios.show')->with('funcionarios',$funcionario)->with('departamento',$departamento);
 	}
 
 

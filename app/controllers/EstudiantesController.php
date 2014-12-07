@@ -70,8 +70,8 @@ class EstudiantesController extends \BaseController {
 	public function getShow($id)
 	{
 		$estudiante = Estudiantes::find($id);
-
-		return View::make('estudiantes.show')->with('estudiantes',$estudiante);
+		$carrera = Carreras::find($estudiante->carrera_fk);
+		return View::make('estudiantes.show')->with('estudiantes',$estudiante)->with('carrera',$carrera);
 	}
 
 
