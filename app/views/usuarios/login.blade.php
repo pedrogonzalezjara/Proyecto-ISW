@@ -1,23 +1,39 @@
 @extends('layouts.login')
 @section('contenido')
 <body>
-  <link media="all" type="text/css" rel="stylesheet" href="assets/css/signin.css">
-      <form method="POST" action="#" accept-charset="UTF-8" class="form-signin" name="form1" onSubmit="javascript:return Rut(document.form1.rut.value)"><input name="_token" type="hidden" value="NtlcW8vZGASyeO6jenKOykSfsPPwWHVWD74QZ0xz"><h2 class="form-signin-heading">Ingrese a su Cuenta</h2>
+    {{HTML::script('assets/js/jquery.Rut.js');}}
+  {{ Form::open(array('url' =>'login','class'=>'form-signin','name'=>'form1','onSubmit'=>"javascript:return Rut(document.form1.rut.value)")) }}
+<h2 class="form-signin-heading">Ingrese a su Cuenta</h2>
+  <div class="form-group">
+      {{ Form::text('rut',Input::old('rut'),array('class' =>'form-control', 'placeholder'=>'Rut','required autofocus','name'=>'rut') )}}
+  </div>
+  <div class="form-group">
+      {{ Form::password('contrasena',array('class' =>'form-control', 'placeholder'=>'Contraseña','required autofocus'))}}
+  </div>    
+  
+  @if(Session::has('mensaje'))
+    <div class="alert alert-danger" role="alert">
+    <b>{{Session::get('mensaje')}}</b>
+    </div>
+  @endif
+  @if(Session::has('reset'))
+    <div class="alert alert-success" role="success">
+    <b>{{Session::get('reset')}}</b>
+    </div>
+  @endif
+  {{ Form::submit('ingresar',array('class' =>'btn btn-lg btn-primary btn-block','value'=>'Validar RUT')) }}
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $('#rut_demo_5').Rut({
+  on_error: function(){ alert('Rut incorrecto'); },
+  format_on: 'keyup'
+  });
+  $("#content > ul").tabs();
+  });
+  </script> 
 
   <div class="form-group">
-      <input class="form-control" placeholder="Rut" required autofocus="required autofocus" name="rut" type="text"></div>
-
-  <div class="form-group">
-      <input class="form-control" placeholder="Contrase&ntilde;a" required autofocus="required autofocus" name="contrasena" type="password" value=""></div>
-
-      
-  <input class="btn btn-lg btn-primary btn-block" value="Ingresar" type="submit">        
-
-  <div class="form-group">
-      <h4 class="form-signin-heading">  <a href="https://tesis.informatica.utem.cl/~pgonzalez/proyecto_laravel/password/remind">Olvidaste tu contrase&ntilde;a?</a></h4>
       <h5 class="form-signin-heading">  <a href="/login/seleccion">Regístrate</a></h5>
-  </div> 
-  </form>      
-</body>
-</html>
+      {{ Form::close() }}
 @stop

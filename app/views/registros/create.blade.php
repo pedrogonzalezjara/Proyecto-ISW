@@ -44,15 +44,22 @@
 				</p>
 				<p>					
 					{{ Form::password('contrasena',array('class' =>'form-control', 'placeholder'=>'Contraseña','required autofocus')) }}
+						 <div>
 						 <div class="col-sm-10">
 						 	@if($errors->has('contrasena'))
+						 	<p>
 						 	<div class="alert alert-danger" role="alert">
 						 		@foreach($errors->get('contrasena') as $error )
 						 		<b>{{ $error }}</b> </br>
 						 		@endforeach
 						 		</div>
+						 		<p>
+						 		</p>
+
 						 		@endif
-						 </div>					
+							</p>
+						 </div>		
+						 </div>			
 				</p>
 				<p>
 					<br>
@@ -62,19 +69,21 @@
 				</p>
 				<p>
 				 {{ Form::password('contrasena_confirmation',array('class' =>'form-control', 'placeholder'=>'repita su contraseña','required autofocus')) }}				 
+				 <div>
 				 	<div class="col-sm-10">
 				 		@if($errors->has('contrasena_confirmation'))
+				 		<p>
 				 		<div class="alert alert-danger" role="alert">
 				 			@foreach($errors->get('contrasena_confirmation') as $error )
 				 			<b>{{ $error }}</b> </br>
 				 			@endforeach
+				 		</p>
 				 		</div>
+				 		/p>
 				 		@endif
 				 	</div>
-				</p>
-							
-			</div>
-				
+				 	</div>							
+			</div>				
 			<p>
 				<input type="submit" value="Guardar" class="btn btn-success">
 				 <a href="/registros" class="btn btn-default">Volver</a>
@@ -82,7 +91,9 @@
 		</form>
 	</div>
 	  @if(Session::has('message'))
-    <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
+    <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}
+    	<a href="/registros" class="btn btn-default">Continuar</a>
+	</div>
   @endif
   {{HTML::script('assets/js/jquery.Rut.js');}}
    <script type="text/javascript">

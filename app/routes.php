@@ -67,9 +67,18 @@ Route::post('/instituciones/update/{id}','InstitucionesController@update');
 Route::get('/instituciones/destroy/{id}','InstitucionesController@destroy');
 Route::controller('instituciones','InstitucionesController');
 //rutas de login
-Route::controller('login','LoginController');
+
+
 Route::controller('seleccion/registro','LoginController');
 Route::controller('login/seleccion','LoginController');
+
+Route::get('login', 'LoginController@getLogin');
+Route::post('login','LoginController@postLogin');
+Route::group(array('before' => 'auth'), function() {
+	Route::get('inicio', 'LoginController@getPerfil');
+	Route::get('inicio2', 'LoginController@getAdmin');
+	Route::get('logout', 'LoginController@getLogout');
+});
 
 //rutas de administrador
 Route::controller('admin','AdminController');
