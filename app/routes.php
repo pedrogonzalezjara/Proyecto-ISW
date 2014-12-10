@@ -75,8 +75,10 @@ Route::controller('login/seleccion','LoginController');
 Route::controller('admin','AdminController');
 Route::controller('alumno','AlumnoController');
 
+
 Route::post('/registros/store','RegistrosController@store');
-Route::controller('registro_alumno','RegistrosController');
+Route::controller('registros','RegistrosController');
+
 
 
 Route::get('/', function()

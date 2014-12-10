@@ -10,10 +10,10 @@
 					<input type="text" name="rut_demo_5" id="rut_demo_5" placeholder="ingrese su rut" class="form-control" required>
 				</p>
 				<p> Nombres
-					<input type="text" name="Nombres" placeholder="ingrese sus nombres" class="form-control" required>
+					<input type="text" name="nombres" placeholder="ingrese sus nombres" class="form-control" required>
 				</p>
 				<p>Apellidos
-					<input type="text" name="Apellidos" placeholder="ingrese sus apellidos" class="form-control" required>
+					<input type="text" name="apellidos" placeholder="ingrese sus apellidos" class="form-control" required>
 				</p>
 				<p>Fecha de Nacimiento
 					<input type="text" name="fecha" placeholder="ejemplo: 01/01/1900" class="form-control" required>
@@ -22,16 +22,16 @@
 					 Sexo: {{Form::select('Genero',array(1 => 'Masculino', 2 => 'Femenino'),Input::old('Genero'),array('class' =>'form-control'))}} 
 				</p>
 				<p>Direccion
-					<input type="text" name="Direccion" placeholder="Direccion" class="form-control" required>
+					<input type="text" name="direccion" placeholder="Direccion" class="form-control" required>
 				</p>
 				<p>Telefono
-					<input type="text" name="Telefono" placeholder="telefono" class="form-control" required>
+					<input type="value" name="telefono" placeholder="telefono" class="form-control" required>
 				</p>
 				<p>Correo Electronico
-					<input type="text" name="Email" placeholder="email" class="form-control" required>
+					<input type="text" name="email" placeholder="email" class="form-control" required>
 				</p>
 				<p>Estado Civil
-					<input type="text" name="Estado" placeholder="ingrese estado civil" class="form-control" required>
+					<input type="text" name="estado" placeholder="ingrese estado civil" class="form-control" required>
 				</p>
 				<p>
 					Seleccione su carrera
@@ -40,7 +40,7 @@
 				 	{{Form::select('carrera',Carreras::lists('nombre','id'))}}
 				</p>
 				<p>
-				 <!--	<b>Ingrese Contraseña</b>
+				 <b>Ingrese Contraseña</b>
 				</p>
 				<p>					
 					{{ Form::password('contrasena',array('class' =>'form-control', 'placeholder'=>'Contraseña','required autofocus')) }}
@@ -74,12 +74,13 @@
 				</p>
 							
 			</div>
-				<-->
+				
 			<p>
 				<input type="submit" value="Guardar" class="btn btn-success">
-				 <a href="/registro_alumno" class="btn btn-default">Volver</a>
+				 <a href="/registros" class="btn btn-default">Volver</a>
 			</p>
 		</form>
+	</div>
 	  @if(Session::has('message'))
     <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
   @endif
