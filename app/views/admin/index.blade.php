@@ -1,8 +1,11 @@
 @extends('layouts.utem')
 @section('contenido')
-vista main
+<div>
+	<p>
+	<p class="text-muted">{{ HTML::image('logo.jpg')}}</p>
+</p>
+</div>
 @stop
-
 
 
 
