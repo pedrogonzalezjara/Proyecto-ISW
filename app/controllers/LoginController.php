@@ -24,12 +24,12 @@ class LoginController extends \BaseController {
 	}
 	 public function postLogin() {
 		$input = Input::all();
-		$user_data = array('rut' => Input::get('rut'),'contrasena' => Input::get('contrasena'));
+		$user_data = array('rut' => Input::get('rut'),'password' => Input::get('password'));
 		if (Auth::attempt($user_data)) {
 			if (Auth::user()->rol_fk == 2)
 				return Redirect::to('/');
 		else {
-			if (Auth::user()->rol_fk == 1)
+			if (Auth::user()->rol_fk == "1")
 				return Redirect::to('/');
 			else
 				return Redirect::to('/home/ingreso')->with('mensaje', 'Rut o Contraseña Incorrectos. ')->withInput();

@@ -1,17 +1,15 @@
 <?php
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
-Class Usuarios extends Eloquent implements UserInterface,RemindableInterface
+Class Users extends Eloquent implements UserInterface,RemindableInterface
 {
-	protected $table = 'usuarios';
+	protected $table = 'users';
 	public $timestamps = false;
 	
-	protected $hidden = array('contrasena');
+	protected $hidden = array('password');
 	protected $fillable = array('rut','password');
 
-	public function Roles() {
-		return $this->belongsTo('Roles');
-	}
+
 	// este metodo se debe implementar por la interfaz
 	public function getAuthIdentifier()
 	{

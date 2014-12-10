@@ -14,9 +14,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	 public function PasswordReminders() {
-		return $this->hasMany('PasswordReminders');
-	}
+	
 	protected $table = 'users';
 
 	/**

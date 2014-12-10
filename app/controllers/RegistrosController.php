@@ -18,7 +18,7 @@ class RegistrosController extends \BaseController {
 
 		$input= Input::all();
 		$registro = new Estudiantes;
-		$usuario = new Usuarios;
+		$usuario = new Users;
 
 		$reglas = array(
 			'rut' => 'unique:usuarios|unique:funcionarios|unique:administradores',
@@ -43,7 +43,7 @@ class RegistrosController extends \BaseController {
 			$registro->estado = ucwords(Input::get('estado'));
 			$registro->carrera_fk = Input::get('carrera');
 			$usuario->rut = Input::get('rut_demo_5');
-			$usuario->contrasena = Input::get('contrasena');
+			$usuario->password = Hash::make($input['contrasena']);
 			$usuario->rol_fk= "2";
 			$usuario->save();
 
