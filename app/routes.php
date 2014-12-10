@@ -69,10 +69,10 @@ Route::controller('instituciones','InstitucionesController');
 //rutas de login
 
 
-Route::controller('seleccion/registro','LoginController');
-Route::controller('login/seleccion','LoginController');
 
 Route::get('login', 'LoginController@getLogin');
+Route::get('seleccion/registro','LoginController@getRegistro');
+Route::get('login/seleccion','LoginController@getSeleccion');
 Route::post('login','LoginController@postLogin');
 Route::group(array('before' => 'auth'), function() {
 	Route::get('inicio', 'LoginController@getPerfil');

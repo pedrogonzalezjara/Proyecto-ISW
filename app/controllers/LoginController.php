@@ -7,10 +7,7 @@ class LoginController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
-	{
-		 return View::make('usuarios.login');
-	}
+	
 
 	public function getRegistro()
 	{

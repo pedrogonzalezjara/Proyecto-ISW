@@ -24,7 +24,7 @@
     <div style= "text-align: center";>
     <table>
       <td>
-        <h1>Proyecto Ingenieria de Software<h1>
+        <h1>Proyecto Ingeniería de Software<h1>
       </td>
       <tr>
       <td>
