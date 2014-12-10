@@ -86,7 +86,7 @@
 			</div>				
 			<p>
 				<input type="submit" value="Guardar" class="btn btn-success">
-				 <a href="/registros" class="btn btn-default">Volver</a>
+				<a href="/registros" class="btn btn-default">Volver</a>
 			</p>
 		</form>
 	</div>
