@@ -15,7 +15,7 @@
             <h5><b>Nombre:</b></h5>         
           	</td>
           	<td>
-           		<input type="text" name="Nombre" class="form-control" required>
+           		<input type="text" name="Nombre" placeholder="Nomre de la escuela" class="form-control" required>
           	</td>
           	<tr>
             <td width=100>
@@ -40,11 +40,9 @@
           <input type="submit" value="Guardar" class="btn btn-primary">
           <a href="/escuelas" class="btn btn-default">Volver</a>  
          </form>
-	  @if(Session::has('message'))
-    <p>
-    <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
-  </p>
-  @endif
+         <p>
+	         @if(Session::has('message'))
+            <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
+          @endif
+          </p>
   @stop
-</body>
-</html>

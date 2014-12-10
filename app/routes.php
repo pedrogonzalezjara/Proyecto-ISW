@@ -30,48 +30,48 @@ Route::post('/escuelas/update/{id}','EscuelasController@update');
 Route::get('/escuelas/destroy/{id}','EscuelasController@destroy');
 Route:: controller('escuelas','EscuelasController');
 
-
+//rutas de carreras
 Route::post('/carreras/store','CarrerasController@store');
 Route::post('/carreras/update/{id}','CarrerasController@update');
 Route::get('/carreras/destroy/{id}','CarrerasController@destroy');
 Route:: controller('carreras','CarrerasController');
-
+//rutas de estudiantes
 Route::post('/estudiantes/store','EstudiantesController@store');
-Route::post('/estudiantes/update/{id}','EstudiantesController@update');
+Route::post('/estudianttes/update/{id}','EstudiantesController@update');
 Route::get('/estudiantes/destroy/{id}','EstudiantesController@destroy');
 Route::controller('estudiantes','EstudiantesController');
-
+//rutas de funcionarios
 Route::post('/funcionarios/store','FuncionariosController@store');
 Route::post('/funcionarios/update/{id}','FuncionariosController@update');
 Route::get('/funcionarios/destroy/{id}','FuncionariosController@destroy');
 Route::controller('funcionarios','FuncionariosController');
 
-
+//rutas de docentes
 Route::post('/docentes/store','DocentesController@store');
 Route::post('/docentes/update/{id}','DocentesController@update');
 Route::get('/docentes/destroy/{id}','DocentesController@destroy');
 Route::controller('docentes','DocentesController');
-
+//rutas de colegios
 Route::post('/colegios/store','ColegiosController@store');
 Route::post('/colegios/update/{id}','ColegiosController@update');
 Route::get('/colegios/destroy/{id}','ColegiosController@destroy');
 Route::controller('colegios','ColegiosController');
-
+//rutas de liceos
 Route::post('/liceos/store','LiceosController@store');
 Route::post('/liceos/update/{id}','LiceosController@update');
 Route::get('/liceos/destroy/{id}','LiceosController@destroy');
 Route::controller('liceos','LiceosController');
-
+//rutas de instituciones
 Route::post('/instituciones/store','InstitucionesController@store');
 Route::post('/instituciones/update/{id}','InstitucionesController@update');
 Route::get('/instituciones/destroy/{id}','InstitucionesController@destroy');
 Route::controller('instituciones','InstitucionesController');
-
+//rutas de login
 Route::controller('login','LoginController');
 Route::controller('seleccion/registro','LoginController');
 Route::controller('login/seleccion','LoginController');
 
-
+//rutas de administrador
 Route::controller('admin','AdminController');
 Route::controller('alumno','AlumnoController');
 

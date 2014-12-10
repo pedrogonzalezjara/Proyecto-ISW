@@ -13,7 +13,7 @@
             Nombre:
           </td>
           <td width=600>
-             <input type="text" name="nombre" class="form-control" required>
+             <input type="text" name="nombre" placeholder="Nombre del colegio" class="form-control" required>
           </td>
          </table>
          <p>
@@ -23,13 +23,13 @@
             Desde:
           </td>
           <td width=250>
-             <input type="value" name="desde" class="form-control" required>
+             <input type="value" name="desde" placeholder="Año de ingreso formato ej: 2008" class="form-control" required>
           </td>
           <td width=100 style="text-align: center">
             Hasta:
           </td>
           <td width=250>
-             <input type="value" name="hasta" class="form-control" required>
+             <input type="value" name="hasta" placeholder="Año de salida o egreso"class="form-control" required>
           </td>
          </table>
          <p>

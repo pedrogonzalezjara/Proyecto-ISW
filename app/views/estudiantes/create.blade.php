@@ -46,10 +46,11 @@
 			</form>
 		</div>
 	</div>
-
+	<p>
 	  @if(Session::has('message'))
-    <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
-  @endif
+    	<div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
+  	   @endif
+  	</p>
   <?php echo HTML::script('assets/js/jquery.Rut.js'); ?>
   <script type="text/javascript">
 	$(document).ready(function(){
@@ -61,5 +62,3 @@
 	});
 	</script>
   @stop
-</body>
-</html>

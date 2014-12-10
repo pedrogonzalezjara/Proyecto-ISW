@@ -8,7 +8,7 @@
   		<div class="panel-body">
   			<form method="post" action="store">
 				<p>
-					<input type="text" name="Rut" placeholder="ingrese su rut" class="form-control" required>
+					<input type="text" name="rut_demo_5" id="rut_demo_5" placeholder="ingrese su rut" class="form-control" required>
 				</p>
 				<p>
 					<input type="text" name="Nombres" placeholder="ingrese sus nombres" class="form-control" required>
@@ -35,6 +35,8 @@
 					Seleccione su departamento
 				</p>				 
 				 	{{Form::select('departamento',Departamentos::lists('nombre','id'))}}
+				 	<p>
+				 	</p>
          		<p>
 					<input type="submit" value="Guardar" class="btn btn-success">
 					<a href="/funcionarios" class="btn btn-default">Volver</a>
@@ -42,9 +44,19 @@
 			</form>
 		</div>
 	</div>
+	<p>
 	  @if(Session::has('message'))
-    <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
-  @endif
+    	<div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}</div>
+ 	 @endif
+ 	</p>
+ 	 <?php echo HTML::script('assets/js/jquery.Rut.js'); ?>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	$('#rut_demo_5').Rut({
+	on_error: function(){ alert('Rut incorrecto'); },
+	format_on: 'keyup'
+	});
+	$("#content > ul").tabs();
+	});
+	</script>
   @stop
-</body>
-</html>
