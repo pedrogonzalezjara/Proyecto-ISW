@@ -1,6 +1,6 @@
 <?php
 
-class RegistrosController extends \BaseController {
+class RegistrostresController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,7 +10,7 @@ class RegistrosController extends \BaseController {
 	
 	public function getCreate()
 	{
-		return View::make('registros.create');
+		return View::make('registrostres.create');
 	}
 
 	public function store()
@@ -21,7 +21,7 @@ class RegistrosController extends \BaseController {
 		$usuario = new Users;
 
 		$reglas = array(
-			'rut' => 'unique:usuarios|unique:|unique:estudiantes|funcionarios|unique:docentes|unique:administradores',
+			'rut' => 'unique:usuarios|unique:funcionarios|unique:administradores',
 			'contrasena' => 'min:6',
 			'contrasena_confirmation'=> 'same:contrasena');
 
@@ -40,8 +40,7 @@ class RegistrosController extends \BaseController {
 			$registro->direccion = ucwords(Input::get('direccion'));
 			$registro->telefono = Input::get('telefono');
 			$registro->email = Input::get('email');
-			$registro->estado = ucwords(Input::get('estado'));
-			$registro->carrera_fk = Input::get('carrera');
+			$registro->departameno_fk = Input::get('departamento');
 			$usuario->rut = Input::get('rut_demo_5');
 			$usuario->password = Hash::make($input['contrasena']);
 			$usuario->rol_fk= "2";
@@ -60,6 +59,6 @@ class RegistrosController extends \BaseController {
 			
 		
 		}
-		return Redirect::to('/registros/create');
+		return Redirect::to('/registrostres/create');
 	}
 }

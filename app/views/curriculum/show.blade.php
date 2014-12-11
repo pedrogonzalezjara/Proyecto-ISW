@@ -53,15 +53,16 @@
 		</td>
 	</table>
 	<table class="table table-striped table-hover " >
+		@if (!empty($estudiantes))
 	<td>
 		<b>Nombre Completo:</b>
 	</td>
 	<td>
-		Neftali Alexis Madariaga Castro
+		{{$estudiantes->nombre}}
 	</td>
 	<tr>
 		<td>
-		<b>Rut:</b>
+		<b>saasdsadsds:</b>
 	</td>
 	<td>
 		17.746.323-k

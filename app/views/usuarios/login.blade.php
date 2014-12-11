@@ -36,4 +36,7 @@
   <div class="form-group">
   <h5 class="form-signin-heading">  <a href="/login/seleccion">Regístrate</a></h5>
  {{ Form::close() }}
+ <div class="form-group">
+  <h5 class="form-signin-heading">  <a href="/admin">Admin</a></h5>
+
 @stop

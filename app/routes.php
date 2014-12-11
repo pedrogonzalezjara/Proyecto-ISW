@@ -88,6 +88,12 @@ Route::controller('alumno','AlumnoController');
 Route::post('/registros/store','RegistrosController@store');
 Route::controller('registros','RegistrosController');
 
+Route::post('/registrosdos/store','RegistrosdosController@store');
+Route::controller('registrosdos','RegistrosdosController');
+
+Route::post('/registrostres/store','RegistrostresController@store');
+Route::controller('registrostres','RegistrostresController');
+
 
 
 Route::get('/', function()

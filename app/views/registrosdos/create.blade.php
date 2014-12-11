@@ -30,14 +30,11 @@
 				<p>Correo Electronico
 					<input type="text" name="email" placeholder="email" class="form-control" required>
 				</p>
-				<p>Estado Civil
-					<input type="text" name="estado" placeholder="ingrese estado civil" class="form-control" required>
-				</p>
 				<p>
-					Seleccione su carrera
+					Seleccione su departamento
 				</p>
 				<p>				 
-				 	{{Form::select('carrera',Carreras::lists('nombre','id'))}}
+				 	{{Form::select('departamento',Departamentos::lists('nombre','id'))}}
 				</p>
 				<p>
 				 <b>Ingrese Contraseña</b>
@@ -92,7 +89,7 @@
 	</div>
 	  @if(Session::has('message'))
     <div class="btn btn-success disabled{{ Session::get('class') }}">{{ Session::get('message')}}
-    	<a href="/curriculum/show/{{ $estudiante->id }}"><span class="btn btn-primary">Ver</span></a>
+    	<a href="/" class="btn btn-primary">Continuar</a>
 	</div>
   @endif
   {{HTML::script('assets/js/jquery.Rut.js');}}
